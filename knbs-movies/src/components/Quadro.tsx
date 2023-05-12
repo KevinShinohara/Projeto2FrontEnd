@@ -6,7 +6,7 @@ export default function Quadro() {
         return filmes.results.map(listaFilmes => {
             return listaFilmes.known_for.map(filme => {
                 if (filme.adult != true && filme.original_title != undefined && filme.genre_ids[0] != 18) {
-                    return <Filme key={filme.id} src={filme.poster_path} title={filme.original_title} overview={filme.overview}></Filme>
+                    return <Filme key={filme.id} id={filme.id} src={filme.poster_path} title={filme.original_title} overview={filme.overview}></Filme>
                 }
             })
         }
